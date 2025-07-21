@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    border: none !important;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2) !important;
+    color: white !important;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.nav-btn:active {
+    transform: translateY(0px) scale(0.98);
+    background: rgba(255,255,255,0.4);
+}
+
+.nav-btn.active {
+    background: white !important;
+    color: #667eea !important;
+    font-weight: bold;
+}
+
+/* Main layout handled by Bootstrap */
+
+/* Dual language display styling */
+.dual-language-front .hindi-text {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.dual-language-front .english-text {
+    color: #e74c3c;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.card-content h2 div {
+    line-height: 1.4;
+}
+
+.progress-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-text {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flash-card {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    touch-action: pan-y;
+    transition: transform 0.2s ease-out;
+}
+
+.flash-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.flash-card:active {
+    transform: scale(0.98);
+}
+
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    user-select: none;
+}
+
+.card-front {
+    background: white;
+}
+
+.card-back {
+    background: #f8f9fa;
+    display: none;
+}
+
+.card-content {
+    text-align: center;
+    width: 100%;
+}
+
+.card-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    display: block;
+    width: 100%;
+    word-break: keep-all;
+    hyphens: none;
+}
+
+.card-front h2 {
+    color: #333;
+}
+
+.card-back h2 {
+    color: #555;
+}
+
+/* Controls handled by Bootstrap classes */
+
+.control-btn {
+    padding: 12px 24px;
+    border: none !important;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.2) !important;
+    color: white !important;
+    backdrop-filter: blur(10px);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.control-btn:active:not(:disabled) {
+    transform: translateY(0px) scale(0.98);
+    background: rgba(255,255,255,0.4);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.control-btn.primary {
+    background: white !important;
+    color: #667eea !important;
+    font-weight: bold;
+}
+
+.control-btn.primary:hover {
+    background: #f8f9fa;
+}
+
+.control-btn.primary:active {
+    transform: translateY(0px) scale(0.98);
+    background: #e9ecef;
+}
+
+
+
+/* Responsive adjustments with Bootstrap */
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .flash-card {
+        height: 160px;
+    }
+    
+    .card-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .control-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .flash-card {
+        height: 250px;
+    }
+    
+    .card-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-container {
+        max-width: 700px;
+    }
+    
+    .flash-card {
+        height: 280px;
+    }
+    
+    .card-content h2 {
+        font-size: 2rem;
+    }
+} 

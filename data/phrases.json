@@ -1,0 +1,438 @@
+[
+    {
+        "front": "आप कैसे हैं?",
+        "back": "How are you?"
+    },
+    {
+        "front": "मैं ठीक हूँ",
+        "back": "I am fine"
+    },
+    {
+        "front": "आपका नाम क्या है?",
+        "back": "What is your name?"
+    },
+    {
+        "front": "मेरा नाम राम है",
+        "back": "My name is Ram"
+    },
+    {
+        "front": "आप कहाँ से हैं?",
+        "back": "Where are you from?"
+    },
+    {
+        "front": "मैं भारत से हूँ",
+        "back": "I am from India"
+    },
+    {
+        "front": "क्या आप अंग्रेजी बोलते हैं?",
+        "back": "Do you speak English?"
+    },
+    {
+        "front": "मुझे समझ नहीं आया",
+        "back": "I don't understand"
+    },
+    {
+        "front": "कृपया धीरे बोलें",
+        "back": "Please speak slowly"
+    },
+    {
+        "front": "क्या आप इसे दोहरा सकते हैं?",
+        "back": "Can you repeat that?"
+    },
+    {
+        "front": "मुझे मदद चाहिए",
+        "back": "I need help"
+    },
+    {
+        "front": "क्या आप मेरी मदद कर सकते हैं?",
+        "back": "Can you help me?"
+    },
+    {
+        "front": "बाथरूम कहाँ है?",
+        "back": "Where is the bathroom?"
+    },
+    {
+        "front": "रेलवे स्टेशन कैसे जाऊँ?",
+        "back": "How do I get to the railway station?"
+    },
+    {
+        "front": "यह कितना है?",
+        "back": "How much is this?"
+    },
+    {
+        "front": "यह बहुत महंगा है",
+        "back": "This is very expensive"
+    },
+    {
+        "front": "क्या आप कम दाम लेंगे?",
+        "back": "Will you take less money?"
+    },
+    {
+        "front": "मुझे यह पसंद है",
+        "back": "I like this"
+    },
+    {
+        "front": "मुझे यह पसंद नहीं है",
+        "back": "I don't like this"
+    },
+    {
+        "front": "मैं इसे खरीदूंगा",
+        "back": "I will buy this"
+    },
+    {
+        "front": "क्या मैं इसे देख सकता हूँ?",
+        "back": "Can I see this?"
+    },
+    {
+        "front": "क्या आपके पास कुछ और है?",
+        "back": "Do you have something else?"
+    },
+    {
+        "front": "बिल कितना है?",
+        "back": "How much is the bill?"
+    },
+    {
+        "front": "मैं कैश से पेमेंट करूंगा",
+        "back": "I will pay by cash"
+    },
+    {
+        "front": "क्या मैं कार्ड से पेमेंट कर सकता हूँ?",
+        "back": "Can I pay by card?"
+    },
+    {
+        "front": "मैं भूखा हूँ",
+        "back": "I am hungry"
+    },
+    {
+        "front": "मुझे प्यास लगी है",
+        "back": "I am thirsty"
+    },
+    {
+        "front": "क्या मैं मेन्यू देख सकता हूँ?",
+        "back": "Can I see the menu?"
+    },
+    {
+        "front": "मुझे यह चाहिए",
+        "back": "I want this"
+    },
+    {
+        "front": "मैं शाकाहारी हूँ",
+        "back": "I am vegetarian"
+    },
+    {
+        "front": "क्या यह तीखा है?",
+        "back": "Is this spicy?"
+    },
+    {
+        "front": "पानी लाइए",
+        "back": "Please bring water"
+    },
+    {
+        "front": "यह बहुत स्वादिष्ट है",
+        "back": "This is very delicious"
+    },
+    {
+        "front": "मुझे डॉक्टर दिखाना है",
+        "back": "I need to see a doctor"
+    },
+    {
+        "front": "मैं बीमार हूँ",
+        "back": "I am sick"
+    },
+    {
+        "front": "मेरे पेट में दर्द है",
+        "back": "My stomach hurts"
+    },
+    {
+        "front": "मेरे सिर में दर्द है",
+        "back": "I have a headache"
+    },
+    {
+        "front": "मुझे बुखार है",
+        "back": "I have fever"
+    },
+    {
+        "front": "मुझे खांसी है",
+        "back": "I have a cough"
+    },
+    {
+        "front": "अस्पताल कहाँ है?",
+        "back": "Where is the hospital?"
+    },
+    {
+        "front": "मुझे एम्बुलेंस चाहिए",
+        "back": "I need an ambulance"
+    },
+    {
+        "front": "यह इमरजेंसी है",
+        "back": "This is an emergency"
+    },
+    {
+        "front": "मैं खो गया हूँ",
+        "back": "I am lost"
+    },
+    {
+        "front": "पुलिस को बुलाइए",
+        "back": "Call the police"
+    },
+    {
+        "front": "मेरा बैग चोरी हो गया",
+        "back": "My bag was stolen"
+    },
+    {
+        "front": "मैं टिकट बुक करना चाहता हूँ",
+        "back": "I want to book a ticket"
+    },
+    {
+        "front": "अगली ट्रेन कब है?",
+        "back": "When is the next train?"
+    },
+    {
+        "front": "प्लेटफॉर्म नंबर क्या है?",
+        "back": "What is the platform number?"
+    },
+    {
+        "front": "मुझे एयरपोर्ट जाना है",
+        "back": "I need to go to the airport"
+    },
+    {
+        "front": "फ्लाइट कितने बजे है?",
+        "back": "What time is the flight?"
+    },
+    {
+        "front": "टैक्सी बुलाइए",
+        "back": "Please call a taxi"
+    },
+    {
+        "front": "कितना समय लगेगा?",
+        "back": "How long will it take?"
+    },
+    {
+        "front": "यहाँ रुकिए",
+        "back": "Stop here"
+    },
+    {
+        "front": "मुझे होटल चाहिए",
+        "back": "I need a hotel"
+    },
+    {
+        "front": "क्या कमरा खाली है?",
+        "back": "Is there a room available?"
+    },
+    {
+        "front": "एक रात का कितना किराया है?",
+        "back": "How much for one night?"
+    },
+    {
+        "front": "क्या नाश्ता शामिल है?",
+        "back": "Is breakfast included?"
+    },
+    {
+        "front": "चेक-इन का समय क्या है?",
+        "back": "What time is check-in?"
+    },
+    {
+        "front": "चेक-आउट का समय क्या है?",
+        "back": "What time is check-out?"
+    },
+    {
+        "front": "मेरी चाबी कहाँ है?",
+        "back": "Where is my key?"
+    },
+    {
+        "front": "कमरे में समस्या है",
+        "back": "There is a problem in the room"
+    },
+    {
+        "front": "मौसम कैसा है?",
+        "back": "How is the weather?"
+    },
+    {
+        "front": "आज बारिश हो रही है",
+        "back": "It is raining today"
+    },
+    {
+        "front": "आज धूप है",
+        "back": "It is sunny today"
+    },
+    {
+        "front": "बहुत गर्मी है",
+        "back": "It is very hot"
+    },
+    {
+        "front": "बहुत ठंड है",
+        "back": "It is very cold"
+    },
+    {
+        "front": "हवा चल रही है",
+        "back": "It is windy"
+    },
+    {
+        "front": "मैं काम कर रहा हूँ",
+        "back": "I am working"
+    },
+    {
+        "front": "मैं पढ़ रहा हूँ",
+        "back": "I am studying"
+    },
+    {
+        "front": "मैं खाना खा रहा हूँ",
+        "back": "I am eating food"
+    },
+    {
+        "front": "मैं सो रहा हूँ",
+        "back": "I am sleeping"
+    },
+    {
+        "front": "मैं टी.वी. देख रहा हूँ",
+        "back": "I am watching TV"
+    },
+    {
+        "front": "मैं संगीत सुन रहा हूँ",
+        "back": "I am listening to music"
+    },
+    {
+        "front": "मैं फोन पर बात कर रहा हूँ",
+        "back": "I am talking on the phone"
+    },
+    {
+        "front": "क्या आप व्यस्त हैं?",
+        "back": "Are you busy?"
+    },
+    {
+        "front": "मेरे पास समय नहीं है",
+        "back": "I don't have time"
+    },
+    {
+        "front": "मैं देर से आऊंगा",
+        "back": "I will come late"
+    },
+    {
+        "front": "माफ करें, मुझे देर हो गई",
+        "back": "Sorry, I am late"
+    },
+    {
+        "front": "कोई बात नहीं",
+        "back": "No problem"
+    },
+    {
+        "front": "बहुत अच्छा",
+        "back": "Very good"
+    },
+    {
+        "front": "सही है",
+        "back": "That's correct"
+    },
+    {
+        "front": "गलत है",
+        "back": "That's wrong"
+    },
+    {
+        "front": "मुझे यकीन नहीं है",
+        "back": "I am not sure"
+    },
+    {
+        "front": "शायद",
+        "back": "Maybe"
+    },
+    {
+        "front": "जरूर",
+        "back": "Definitely"
+    },
+    {
+        "front": "बिल्कुल नहीं",
+        "back": "Absolutely not"
+    },
+    {
+        "front": "मुझे खुशी है",
+        "back": "I am happy"
+    },
+    {
+        "front": "मुझे दुख है",
+        "back": "I am sad"
+    },
+    {
+        "front": "मैं थका हुआ हूँ",
+        "back": "I am tired"
+    },
+    {
+        "front": "मैं तैयार हूँ",
+        "back": "I am ready"
+    },
+    {
+        "front": "चलिए",
+        "back": "Let's go"
+    },
+    {
+        "front": "रुकिए",
+        "back": "Wait"
+    },
+    {
+        "front": "जल्दी करिए",
+        "back": "Hurry up"
+    },
+    {
+        "front": "धीरे-धीरे",
+        "back": "Slowly"
+    },
+    {
+        "front": "सावधान",
+        "back": "Be careful"
+    },
+    {
+        "front": "शुभ रात्रि",
+        "back": "Good night"
+    },
+    {
+        "front": "सुप्रभात",
+        "back": "Good morning"
+    },
+    {
+        "front": "फिर मिलेंगे",
+        "back": "See you later"
+    },
+    {
+        "front": "अलविदा",
+        "back": "Goodbye"
+    },
+    {
+        "front": "खुश रहिए",
+        "back": "Stay happy"
+    },
+    {
+        "front": "शुभकामनाएं",
+        "back": "Best wishes"
+    },
+    {
+        "front": "जन्मदिन मुबारक",
+        "back": "Happy birthday"
+    },
+    {
+        "front": "नया साल मुबारक",
+        "back": "Happy New Year"
+    },
+    {
+        "front": "बधाई हो",
+        "back": "Congratulations"
+    },
+    {
+        "front": "आपको भी",
+        "back": "Same to you"
+    },
+    {
+        "front": "क्या हुआ?",
+        "back": "What happened?"
+    },
+    {
+        "front": "कुछ नहीं",
+        "back": "Nothing"
+    },
+    {
+        "front": "सब ठीक है",
+        "back": "Everything is fine"
+    },
+    {
+        "front": "कोई समस्या नहीं",
+        "back": "No problem"
+    }
+] 

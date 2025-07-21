@@ -1,0 +1,422 @@
+[
+    {
+        "front": "व्यक्ति",
+        "back": "Person"
+    },
+    {
+        "front": "पुरुष",
+        "back": "Man"
+    },
+    {
+        "front": "महिला",
+        "back": "Woman"
+    },
+    {
+        "front": "बच्चा",
+        "back": "Child"
+    },
+    {
+        "front": "लड़का",
+        "back": "Boy"
+    },
+    {
+        "front": "लड़की",
+        "back": "Girl"
+    },
+    {
+        "front": "माता-पिता",
+        "back": "Parents"
+    },
+    {
+        "front": "पिता",
+        "back": "Father"
+    },
+    {
+        "front": "माता",
+        "back": "Mother"
+    },
+    {
+        "front": "भाई",
+        "back": "Brother"
+    },
+    {
+        "front": "बहन",
+        "back": "Sister"
+    },
+    {
+        "front": "दादा/नाना",
+        "back": "Grandfather"
+    },
+    {
+        "front": "दादी/नानी",
+        "back": "Grandmother"
+    },
+    {
+        "front": "चाचा/मामा",
+        "back": "Uncle"
+    },
+    {
+        "front": "चाची/मामी",
+        "back": "Aunt"
+    },
+    {
+        "front": "पति",
+        "back": "Husband"
+    },
+    {
+        "front": "पत्नी",
+        "back": "Wife"
+    },
+    {
+        "front": "बेटा",
+        "back": "Son"
+    },
+    {
+        "front": "बेटी",
+        "back": "Daughter"
+    },
+    {
+        "front": "शिक्षक",
+        "back": "Teacher"
+    },
+    {
+        "front": "डॉक्टर",
+        "back": "Doctor"
+    },
+    {
+        "front": "इंजीनियर",
+        "back": "Engineer"
+    },
+    {
+        "front": "नर्स",
+        "back": "Nurse"
+    },
+    {
+        "front": "किसान",
+        "back": "Farmer"
+    },
+    {
+        "front": "ड्राइवर",
+        "back": "Driver"
+    },
+    {
+        "front": "दुकानदार",
+        "back": "Shopkeeper"
+    },
+    {
+        "front": "पुलिस",
+        "back": "Police"
+    },
+    {
+        "front": "वकील",
+        "back": "Lawyer"
+    },
+    {
+        "front": "रसोइया",
+        "back": "Cook"
+    },
+    {
+        "front": "छात्र",
+        "back": "Student"
+    },
+    {
+        "front": "घर",
+        "back": "House"
+    },
+    {
+        "front": "कमरा",
+        "back": "Room"
+    },
+    {
+        "front": "रसोई",
+        "back": "Kitchen"
+    },
+    {
+        "front": "बाथरूम",
+        "back": "Bathroom"
+    },
+    {
+        "front": "बेडरूम",
+        "back": "Bedroom"
+    },
+    {
+        "front": "दरवाजा",
+        "back": "Door"
+    },
+    {
+        "front": "खिड़की",
+        "back": "Window"
+    },
+    {
+        "front": "मेज़",
+        "back": "Table"
+    },
+    {
+        "front": "कुर्सी",
+        "back": "Chair"
+    },
+    {
+        "front": "बिस्तर",
+        "back": "Bed"
+    },
+    {
+        "front": "किताब",
+        "back": "Book"
+    },
+    {
+        "front": "कलम",
+        "back": "Pen"
+    },
+    {
+        "front": "कागज़",
+        "back": "Paper"
+    },
+    {
+        "front": "कंप्यूटर",
+        "back": "Computer"
+    },
+    {
+        "front": "फोन",
+        "back": "Phone"
+    },
+    {
+        "front": "गाड़ी",
+        "back": "Car"
+    },
+    {
+        "front": "बस",
+        "back": "Bus"
+    },
+    {
+        "front": "ट्रेन",
+        "back": "Train"
+    },
+    {
+        "front": "हवाई जहाज",
+        "back": "Airplane"
+    },
+    {
+        "front": "साइकिल",
+        "back": "Bicycle"
+    },
+    {
+        "front": "पानी",
+        "back": "Water"
+    },
+    {
+        "front": "दूध",
+        "back": "Milk"
+    },
+    {
+        "front": "चाय",
+        "back": "Tea"
+    },
+    {
+        "front": "कॉफी",
+        "back": "Coffee"
+    },
+    {
+        "front": "रोटी",
+        "back": "Bread"
+    },
+    {
+        "front": "चावल",
+        "back": "Rice"
+    },
+    {
+        "front": "दाल",
+        "back": "Lentils"
+    },
+    {
+        "front": "सब्जी",
+        "back": "Vegetables"
+    },
+    {
+        "front": "फल",
+        "back": "Fruit"
+    },
+    {
+        "front": "सेब",
+        "back": "Apple"
+    },
+    {
+        "front": "केला",
+        "back": "Banana"
+    },
+    {
+        "front": "आम",
+        "back": "Mango"
+    },
+    {
+        "front": "संतरा",
+        "back": "Orange"
+    },
+    {
+        "front": "लाल",
+        "back": "Red"
+    },
+    {
+        "front": "नीला",
+        "back": "Blue"
+    },
+    {
+        "front": "हरा",
+        "back": "Green"
+    },
+    {
+        "front": "पीला",
+        "back": "Yellow"
+    },
+    {
+        "front": "काला",
+        "back": "Black"
+    },
+    {
+        "front": "सफेद",
+        "back": "White"
+    },
+    {
+        "front": "एक",
+        "back": "One"
+    },
+    {
+        "front": "दो",
+        "back": "Two"
+    },
+    {
+        "front": "तीन",
+        "back": "Three"
+    },
+    {
+        "front": "चार",
+        "back": "Four"
+    },
+    {
+        "front": "पांच",
+        "back": "Five"
+    },
+    {
+        "front": "छह",
+        "back": "Six"
+    },
+    {
+        "front": "सात",
+        "back": "Seven"
+    },
+    {
+        "front": "आठ",
+        "back": "Eight"
+    },
+    {
+        "front": "नौ",
+        "back": "Nine"
+    },
+    {
+        "front": "दस",
+        "back": "Ten"
+    },
+    {
+        "front": "सोमवार",
+        "back": "Monday"
+    },
+    {
+        "front": "मंगलवार",
+        "back": "Tuesday"
+    },
+    {
+        "front": "बुधवार",
+        "back": "Wednesday"
+    },
+    {
+        "front": "गुरुवार",
+        "back": "Thursday"
+    },
+    {
+        "front": "शुक्रवार",
+        "back": "Friday"
+    },
+    {
+        "front": "शनिवार",
+        "back": "Saturday"
+    },
+    {
+        "front": "रविवार",
+        "back": "Sunday"
+    },
+    {
+        "front": "आज",
+        "back": "Today"
+    },
+    {
+        "front": "कल",
+        "back": "Yesterday/Tomorrow"
+    },
+    {
+        "front": "सुबह",
+        "back": "Morning"
+    },
+    {
+        "front": "दोपहर",
+        "back": "Afternoon"
+    },
+    {
+        "front": "शाम",
+        "back": "Evening"
+    },
+    {
+        "front": "रात",
+        "back": "Night"
+    },
+    {
+        "front": "समय",
+        "back": "Time"
+    },
+    {
+        "front": "घंटा",
+        "back": "Hour"
+    },
+    {
+        "front": "मिनट",
+        "back": "Minute"
+    },
+    {
+        "front": "बड़ा",
+        "back": "Big"
+    },
+    {
+        "front": "छोटा",
+        "back": "Small"
+    },
+    {
+        "front": "अच्छा",
+        "back": "Good"
+    },
+    {
+        "front": "बुरा",
+        "back": "Bad"
+    },
+    {
+        "front": "नया",
+        "back": "New"
+    },
+    {
+        "front": "पुराना",
+        "back": "Old"
+    },
+    {
+        "front": "तेज़",
+        "back": "Fast"
+    },
+    {
+        "front": "धीमा",
+        "back": "Slow"
+    },
+    {
+        "front": "गर्म",
+        "back": "Hot"
+    },
+    {
+        "front": "ठंडा",
+        "back": "Cold"
+    }
+] 
