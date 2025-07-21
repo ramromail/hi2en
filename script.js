@@ -20,6 +20,12 @@ class FlashCardApp {
         this.nextBtn = document.getElementById('next-btn');
         this.progressFill = document.getElementById('progress-fill');
         this.progressText = document.getElementById('progress-text');
+        this.cardImage = document.getElementById('card-image');
+        this.imageLoading = document.getElementById('image-loading');
+        this.cardImageContainer = document.getElementById('card-image-container');
+        
+        // Cache for loaded images
+        this.imageCache = new Map();
     }
 
     attachEventListeners() {
@@ -136,6 +142,168 @@ class FlashCardApp {
         return shuffled;
     }
 
+    async fetchImage(englishWord) {
+        // Check cache first
+        if (this.imageCache.has(englishWord)) {
+            return this.imageCache.get(englishWord);
+        }
+
+        try {
+            // Use Unsplash Source API (no auth required)
+            const query = encodeURIComponent(englishWord.toLowerCase().trim());
+            const imageUrl = `https://source.unsplash.com/300x200/?${query}`;
+            
+            // Test if the image loads
+            const testImage = new Image();
+            const imagePromise = new Promise((resolve, reject) => {
+                testImage.onload = () => resolve(imageUrl);
+                testImage.onerror = () => reject(new Error('Image failed to load'));
+                testImage.src = imageUrl;
+            });
+
+            const result = await Promise.race([
+                imagePromise,
+                new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000))
+            ]);
+
+            this.imageCache.set(englishWord, result);
+            return result;
+            
+        } catch (error) {
+            console.log('Error fetching image for', englishWord, ':', error);
+            
+            // Try alternative image sources or use emoji fallback
+            const emojiMap = {
+                'water': '💧',
+                'food': '🍽️',
+                'house': '🏠',
+                'home': '🏠',
+                'car': '🚗',
+                'phone': '📱',
+                'book': '📖',
+                'doctor': '👨‍⚕️',
+                'teacher': '👨‍🏫',
+                'red': '🔴',
+                'blue': '🔵',
+                'green': '🟢',
+                'yellow': '🟡',
+                'black': '⚫',
+                'white': '⚪',
+                'one': '1️⃣',
+                'two': '2️⃣',
+                'three': '3️⃣',
+                'four': '4️⃣',
+                'five': '5️⃣',
+                'mother': '👩',
+                'father': '👨',
+                'person': '👤',
+                'man': '👨',
+                'woman': '👩',
+                'child': '👶',
+                'boy': '👦',
+                'girl': '👧',
+                'hospital': '🏥',
+                'school': '🏫',
+                'market': '🏪',
+                'bus': '🚌',
+                'train': '🚆',
+                'airplane': '✈️',
+                'table': '🪑',
+                'chair': '🪑',
+                'milk': '🥛',
+                'tea': '🍵',
+                'bread': '🍞',
+                'rice': '🍚',
+                'fruit': '🍎',
+                'vegetable': '🥬',
+                'sun': '☀️',
+                'moon': '🌙',
+                'star': '⭐',
+                'tree': '🌳',
+                'flower': '🌸',
+                'money': '💰',
+                'time': '⏰',
+                'work': '💼',
+                'love': '❤️',
+                'heart': '❤️',
+                'happy': '😊',
+                'sad': '😢',
+                'angry': '😠',
+                'fire': '🔥',
+                'earth': '🌍',
+                'hand': '✋',
+                'eye': '👁️',
+                'mouth': '👄',
+                'head': '🗣️',
+                'dog': '🐕',
+                'cat': '🐱',
+                'bird': '🐦',
+                'fish': '🐟'
+            };
+            
+            const emoji = emojiMap[englishWord.toLowerCase()];
+            if (emoji) {
+                this.imageCache.set(englishWord, 'emoji:' + emoji);
+                return 'emoji:' + emoji;
+            }
+            
+            this.imageCache.set(englishWord, null);
+            return null;
+        }
+    }
+
+    async loadImage(englishWord) {
+        // Show loading state
+        this.cardImage.style.display = 'none';
+        this.imageLoading.style.display = 'flex';
+
+        try {
+            const imageResult = await this.fetchImage(englishWord);
+            
+            if (imageResult) {
+                if (imageResult.startsWith('emoji:')) {
+                    // Show emoji instead of image
+                    const emoji = imageResult.replace('emoji:', '');
+                    this.imageLoading.innerHTML = emoji;
+                    this.imageLoading.style.fontSize = '3rem';
+                    this.imageLoading.style.animation = 'none';
+                    this.cardImage.style.display = 'none';
+                } else {
+                    // Show actual image
+                    const img = new Image();
+                    img.onload = () => {
+                        this.cardImage.src = imageResult;
+                        this.cardImage.alt = englishWord;
+                        this.cardImage.style.display = 'block';
+                        this.imageLoading.style.display = 'none';
+                    };
+                    img.onerror = () => {
+                        this.hideImage();
+                    };
+                    img.src = imageResult;
+                }
+            } else {
+                this.hideImage();
+            }
+        } catch (error) {
+            this.hideImage();
+        }
+    }
+
+    hideImage() {
+        this.cardImage.style.display = 'none';
+        this.imageLoading.style.display = 'none';
+        this.cardImageContainer.style.display = 'none';
+        // Reset emoji state
+        this.imageLoading.innerHTML = '📷';
+        this.imageLoading.style.fontSize = '2rem';
+        this.imageLoading.style.animation = 'pulse 1.5s ease-in-out infinite alternate';
+    }
+
+    showImageContainer() {
+        this.cardImageContainer.style.display = 'flex';
+    }
+
     async loadData() {
         try {
             const [vocabResponse, phrasesResponse] = await Promise.all([
@@ -194,6 +362,16 @@ class FlashCardApp {
                 ${currentCard.back}
             </div>
         `;
+        
+        // Load image for vocabulary words (not phrases)
+        if (this.currentSection === 'vocabulary') {
+            this.showImageContainer();
+            // Extract the main English word (first word if multiple)
+            const englishWord = currentCard.back.split(' ')[0].replace(/[^\w]/g, '');
+            this.loadImage(englishWord);
+        } else {
+            this.hideImage();
+        }
         
         this.updateProgress((this.currentIndex + 1) / data.length * 100);
         this.updateNavigation();
