@@ -1,47 +1,34 @@
-# Learn English - Hindi to English Flash Cards
+# Learn Languages - Tri-lingual Flash Cards
 
-A modern, interactive flash card application designed specifically for Hindi speakers learning English. Features comprehensive vocabulary and phrases with automatic randomization and mobile-friendly swipe gestures.
+A modern, minimalist flashcard application supporting multiple languages with a beautiful dark theme design. Perfect for language learners who want to study translations between Hindi, English, and Finnish.
 
 ## Features
 
-- **Hindi to English Learning**: Specialized content for Hindi speakers
-- **Dual Language Display**: See both Hindi and English simultaneously on each card
-- **Visual Learning**: Images and emojis for vocabulary words to enhance memory retention
-- **Vocabulary Section (शब्दावली)**: 95+ essential English words with Hindi translations and visual aids
-- **Phrases Section (वाक्य)**: 75+ practical English phrases for daily conversation
-- **Smart Image System**: Automatic image fetching with emoji fallbacks for 50+ common words
+- **Tri-lingual Support**: Learn between Hindi, English, and Finnish
+- **Dynamic Language Selection**: Choose any source and target language combination
+- **Flag Visual Indicators**: Subtle flag icons show which language is which
+- **Dark Theme Design**: Easy on the eyes with pure black background and elegant styling
 - **Automatic Shuffling**: Content randomized on every page load for varied learning
 - **Swipe Gestures**: Mobile-friendly left/right swipe navigation
-- **Responsive Design**: Bootstrap-powered layout for all devices
+- **Responsive Design**: Bootstrap-powered layout optimized for all devices
 - **Progress Tracking**: Visual progress bar shows your advancement
-- **Multiple Navigation Options**: Swipe, keyboard, or button controls
-- **Offline-Friendly**: Cached images and emoji fallbacks work without internet
+- **Multiple Navigation Options**: Swipe, keyboard arrows, or button controls
+- **Minimalist Interface**: Clean, distraction-free design focuses on learning
 - **GitHub Pages Ready**: Static files for easy hosting
+- **Comprehensive Content**: 1700+ phrases covering essential conversations and vocabulary
 
-## Content Overview
+## Supported Languages
 
-### Vocabulary (शब्दावली)
-Covers essential categories with **visual learning aids**:
-- **People & Family**: व्यक्ति → Person 👤, माता-पिता → Parents 👪
-- **Daily Objects**: पानी → Water 💧, खाना → Food 🍽️, घर → House 🏠
-- **Professions**: डॉक्टर → Doctor 👨‍⚕️, शिक्षक → Teacher 👨‍🏫
-- **Places**: अस्पताल → Hospital 🏥, स्कूल → School 🏫
-- **Colors**: लाल → Red 🔴, नीला → Blue 🔵, हरा → Green 🟢
-- **Numbers**: एक → One 1️⃣, दो → Two 2️⃣, तीन → Three 3️⃣
-- **Transportation**: गाड़ी → Car 🚗, बस → Bus 🚌, ट्रेन → Train 🚆
-
-**Image System**: Each vocabulary word displays relevant images from Unsplash API or emoji fallbacks for instant visual association.
-
-### Phrases (वाक्य)
-Essential conversations:
-- **Greetings**: आप कैसे हैं? → How are you?
-- **Introductions**: मेरा नाम राम है → My name is Ram
-- **Travel**: बाथरूम कहाँ है? → Where is the bathroom?
-- **Shopping**: यह कितना है? → How much is this?
-- **Emergency**: मुझे मदद चाहिए → I need help
-- **Daily Situations**: क्या आप अंग्रेजी बोलते हैं? → Do you speak English?
+- **Hindi (हिं)** 🇮🇳 - With beautiful Devanagari script support
+- **English (EN)** 🇬🇧 - International standard
+- **Finnish (FI)** 🇫🇮 - Complete phrase translations
 
 ## How to Use
+
+### Language Selection
+- **Footer Controls**: Use the language selectors to choose your source and target languages
+- **Swap Button**: Click ⇄ or press Space to instantly swap languages
+- **Dynamic Updates**: Flags and content update immediately when you change languages
 
 ### Navigation Options
 1. **Swipe Gestures** (Mobile/Tablet):
@@ -51,21 +38,44 @@ Essential conversations:
 2. **Keyboard Navigation** (Desktop):
    - Left Arrow: Previous card
    - Right Arrow: Next card
+   - Spacebar: Swap languages
 
-3. **Button Controls**: Use Previous/Next buttons
+3. **Button Controls**: Use < and > buttons for navigation
 
-4. **Section Switching**: Toggle between शब्दावली (Vocabulary) and वाक्य (Phrases)
+### Visual Language Indicators
+- **Small flag icons** appear in the corners of each card section
+- **Top section**: Shows flag for source language
+- **Bottom section**: Shows flag for target language
+- **Automatic positioning**: Flags update when you swap languages
 
-5. **Shuffle Content**: Refresh the page to get new random order
+## Content Overview
 
-### Learning Tips
-- Each card shows both Hindi and English simultaneously for efficient learning
-- **Visual memory**: Images and emojis help create stronger memory associations
-- Progress bar helps track your advancement through the content
-- Refresh page anytime to practice with different order
-- Focus on pronunciation while reading English translations
-- **Vocabulary vs Phrases**: Images appear only for vocabulary words to aid memorization
-- Use in daily practice sessions for best results
+The application includes comprehensive language content covering:
+
+- **Greetings & Introductions**: Basic social interactions
+- **Daily Conversations**: Common phrases for everyday situations  
+- **Travel & Navigation**: Essential phrases for getting around
+- **Shopping & Commerce**: Useful expressions for transactions
+- **Emergency Situations**: Important phrases for urgent needs
+- **Numbers & Time**: Counting and temporal expressions
+- **Family & Relationships**: Personal and social connections
+- **Food & Dining**: Restaurant and meal-related vocabulary
+- **Work & Professional**: Business and career terminology
+- **Health & Medical**: Healthcare-related expressions
+
+## Design Philosophy
+
+### Dark Theme Benefits
+- **Eye-friendly**: Pure black background reduces strain during long study sessions
+- **OLED-optimized**: Saves battery on modern mobile devices
+- **Professional appearance**: Elegant, modern aesthetic
+- **Better focus**: Minimal distractions keep attention on learning content
+
+### Minimalist Interface
+- **Clean typography**: High contrast text for maximum readability
+- **Subtle indicators**: Flag icons provide context without visual clutter
+- **Responsive scaling**: Content adapts beautifully to any screen size
+- **Gesture-friendly**: Large touch targets and smooth swipe responses
 
 ## Setup for GitHub Pages
 
@@ -74,94 +84,67 @@ Essential conversations:
 3. Select "Deploy from a branch" and choose "main"
 4. Your app will be available at `https://yourusername.github.io/repositoryname`
 
-## Customizing Content
-
-### Adding Vocabulary
-
-Edit `data/vocabulary.json` with your own Hindi-English pairs:
-
-```json
-[
-    {
-        "front": "हिंदी शब्द",
-        "back": "English Translation"
-    }
-]
-```
-
-### Adding Phrases
-
-Edit `data/phrases.json` with your own Hindi-English phrases:
-
-```json
-[
-    {
-        "front": "हिंदी वाक्य",
-        "back": "English Sentence"
-    }
-]
-```
-
-## Visual Learning System
-
-The app features an intelligent image system that enhances vocabulary learning:
-
-### **Image Sources**
-1. **Unsplash API**: Automatically fetches relevant photos for English words
-2. **Emoji Fallbacks**: 50+ carefully selected emojis for instant visual recognition
-3. **Caching System**: Stores loaded images for faster subsequent access
-
-### **Smart Behavior**
-- **Vocabulary Only**: Images appear only for vocabulary words, not phrases
-- **Auto-Detection**: Extracts the primary English word for image searches
-- **Graceful Fallbacks**: Shows emojis when photos aren't available
-- **Performance Optimized**: 5-second timeout and efficient caching
-
-### **Example Visual Mappings**
-```
-पानी → Water 💧 (shows water droplet or water image)
-गाड़ी → Car 🚗 (shows car emoji or car photo)
-डॉक्टर → Doctor 👨‍⚕️ (shows doctor emoji or medical image)
-```
-
 ## File Structure
 
 ```
-├── index.html          # Main HTML file
-├── styles.css          # Custom styling
-├── script.js           # JavaScript functionality
+├── index.html          # Main application HTML
+├── styles.css          # Dark theme styling and responsive design
+├── script.js           # Application logic and language handling
 ├── data/
-│   ├── vocabulary.json # Hindi-English vocabulary (95+ words)
-│   └── phrases.json    # Hindi-English phrases (75+ phrases)
+│   └── phrases.json    # Tri-lingual phrase database
 └── README.md          # This documentation
+```
+
+## Data Format
+
+The application uses a structured JSON format for tri-lingual content:
+
+```json
+{
+  "001": {
+    "Hello": {
+      "hi": "नमस्ते",
+      "en": "Hello", 
+      "fi": "Hei"
+    }
+  }
+}
 ```
 
 ## Technologies Used
 
-- **HTML5**: Modern semantic structure
-- **CSS3**: Custom styling with animations and transitions
-- **Bootstrap 5**: Responsive grid system and components
-- **Vanilla JavaScript (ES6+)**: Interactive functionality and async image loading
-- **JSON**: Structured data storage
-- **Unsplash Source API**: Dynamic image fetching for vocabulary words
-- **Emoji Unicode**: Visual fallbacks for 50+ common words
-- **Image Caching**: Client-side caching for performance optimization
-- **Fisher-Yates Algorithm**: True randomization of content
+- **HTML5**: Semantic structure with modern accessibility features
+- **CSS3**: Advanced styling with CSS Grid, Flexbox, and custom properties
+- **Bootstrap 5**: Responsive components and utility classes
+- **Vanilla JavaScript (ES6+)**: Modern async/await and class-based architecture
+- **JSON**: Structured tri-lingual data storage
+- **SVG**: Crisp flag icons with embedded data URIs
+- **CSS Animations**: Smooth transitions and hover effects
 
 ## Browser Support
 
-Works in all modern browsers that support ES6+ features:
-- Chrome 60+
-- Firefox 55+
+Works in all modern browsers:
+- Chrome 70+
+- Firefox 60+
 - Safari 12+
 - Edge 79+
+- Mobile browsers with ES6+ support
 
 ## Target Audience
 
-- Hindi speakers learning English
-- Students preparing for English proficiency tests
-- Professionals needing English for workplace communication
-- Anyone wanting to improve Hindi-English vocabulary and phrases
+- **Multi-language learners**: Anyone studying Hindi, English, or Finnish
+- **Language exchange students**: Perfect for conversation practice
+- **Travelers**: Essential phrases for visiting India, UK, or Finland
+- **Language enthusiasts**: Clean interface for efficient vocabulary building
+- **Mobile learners**: Optimized for on-the-go study sessions
+
+## Contributing
+
+Feel free to contribute by:
+- Adding new language phrases to the JSON structure
+- Improving the user interface
+- Suggesting new features
+- Reporting bugs or issues
 
 ## License
 

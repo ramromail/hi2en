@@ -1,313 +1,249 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Minimal custom CSS - Bootstrap does most of the heavy lifting */
 
+/* Pure black background */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
-}
-
-header h1 {
-    color: white;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.nav-btn {
-    padding: 12px 24px;
-    border: none !important;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.2) !important;
-    color: white !important;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.nav-btn:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
-}
-
-.nav-btn:active {
-    transform: translateY(0px) scale(0.98);
-    background: rgba(255,255,255,0.4);
-}
-
-.nav-btn.active {
-    background: white !important;
-    color: #667eea !important;
-    font-weight: bold;
-}
-
-/* Main layout handled by Bootstrap */
-
-/* Dual language display styling */
-.dual-language-front .hindi-text {
-    color: #2c3e50;
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-.dual-language-front .english-text {
-    color: #e74c3c;
-    font-weight: 500;
-    font-size: 1em;
-}
-
-.card-content h2 div {
-    line-height: 1.4;
-}
-
-/* Image styling */
-.card-image-container {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
+    background: #000000;
     overflow: hidden;
-    background: rgba(255,255,255,0.1);
+}
+
+/* Header with dark theme */
+header {
+    background: #1a1a1a !important;
     backdrop-filter: blur(10px);
+    color: #ffffff !important;
+    font-weight: 600;
+    border: 1px solid #333333;
 }
 
-.card-image {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    border-radius: 6px;
-    transition: opacity 0.3s ease;
+/* Custom flashcard enhancements - dark theme */
+.flashcard-custom {
+    border-radius: 1rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: grab;
+    background: #2a2a2a !important;
+    border: 1px solid #404040 !important;
 }
 
-.image-loading {
-    font-size: 2rem;
-    opacity: 0.6;
-    animation: pulse 1.5s ease-in-out infinite alternate;
+.flashcard-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 2rem rgba(255,255,255,0.1) !important;
 }
 
-@keyframes pulse {
-    0% { opacity: 0.4; }
-    100% { opacity: 0.8; }
+.flashcard-custom:active {
+    cursor: grabbing;
 }
 
-.progress-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+/* Language-specific typography - light text on dark with flag backgrounds */
+.hi-text {
+    font-family: 'Noto Sans Devanagari', 'Arial Unicode MS', sans-serif;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #ffffff;
+}
+
+.en-text {
+    color: #f0f0f0;
+}
+
+.fi-text {
+    color: #f0f0f0;
+}
+
+/* Flag backgrounds for different languages - small left-side icons */
+.card-section-hi::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 14px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="0.67" fill="%23FF9933"/><rect y="0.67" width="3" height="0.67" fill="%23FFFFFF"/><rect y="1.33" width="3" height="0.67" fill="%23138808"/><circle cx="1.5" cy="1" r="0.3" fill="none" stroke="%23000080" stroke-width="0.05"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-section-en::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 14px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="%23012169"/><g stroke="%23FFF" stroke-width="6"><path d="m0,0 60,30m0-30L0,30"/></g><g stroke="%23C8102E" stroke-width="4"><path d="m0,0 60,30m0-30L0,30"/></g><g stroke="%23FFF" stroke-width="10"><path d="M30,0v30M0,15H60"/></g><g stroke="%23C8102E" stroke-width="6"><path d="M30,0v30M0,15H60"/></g></svg>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-section-fi::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 14px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11"><rect width="18" height="11" fill="%23FFFFFF"/><rect width="18" height="2" y="4" fill="%23003580"/><rect width="2" height="11" x="5" fill="%23003580"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom section flags positioned at bottom-left */
+.card-body > div:last-child .card-section-hi::before,
+.card-body > div:last-child .card-section-en::before,
+.card-body > div:last-child .card-section-fi::before {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Card sections need relative positioning for flag overlays */
+.flashcard-custom .card-body > div {
+    position: relative;
+    z-index: 2;
+}
+
+/* Language indicators */
+.text-muted {
+    color: #888888 !important;
+}
+
+/* Progress bar - dark theme */
+.progress {
+    background: #333333 !important;
 }
 
 .progress-bar {
-    width: 100%;
-    height: 8px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
+    background: #ffffff !important;
 }
 
-.progress-fill {
-    height: 100%;
-    background: white;
-    border-radius: 4px;
-    transition: width 0.3s ease;
-    width: 0%;
+/* Navigation buttons - dark theme */
+.btn-dark {
+    background-color: #404040 !important;
+    border-color: #404040 !important;
+    color: #ffffff !important;
 }
 
-.progress-text {
-    position: absolute;
-    top: -25px;
-    right: 0;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
+.btn-dark:hover {
+    background-color: #555555 !important;
+    border-color: #555555 !important;
 }
 
-.card-container {
-    perspective: 1000px;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.btn-dark:disabled {
+    background-color: #2a2a2a !important;
+    border-color: #2a2a2a !important;
+    opacity: 0.6;
 }
 
-.flash-card {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    cursor: grab;
-    touch-action: pan-y;
-    transition: transform 0.2s ease-out;
-}
-
-.flash-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.flash-card:active {
-    transform: scale(0.98);
-}
-
-
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    user-select: none;
-}
-
-.card-front {
-    background: white;
-}
-
-.card-back {
-    background: #f8f9fa;
-    display: none;
-}
-
-.card-content {
+/* Compact language selection - dark theme */
+.language-select {
+    min-width: 50px;
+    width: 50px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.3rem;
     text-align: center;
-    width: 100%;
+    border: 1px solid #555555;
+    background: #2a2a2a;
+    color: #ffffff;
 }
 
-.card-content h2 {
-    font-size: 1.8rem;
-    line-height: 1.4;
+.swap-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+    padding: 0;
+    background: #2a2a2a !important;
+    border: 1px solid #555555 !important;
+    color: #ffffff !important;
+}
+
+.swap-btn:hover {
+    background: #404040 !important;
+    border-color: #666666 !important;
+}
+
+/* Footer - pure black theme */
+footer {
+    background: #000000 !important;
+    border-top: 1px solid #222222 !important;
+    backdrop-filter: blur(10px);
+}
+
+footer small {
+    color: #cccccc !important;
+}
+
+/* Progress text - light on dark */
+#progress-text {
+    color: #cccccc !important;
+}
+
+/* Responsive text scaling for better mobile experience */
+@media (max-width: 768px) {
+    .hi-text {
+        font-size: 1.25rem !important;
+    }
+    
+    .fs-4 {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hi-text {
+        font-size: 1.1rem !important;
+    }
+    
+    .fs-4 {
+        font-size: 1rem !important;
+    }
+    
+    .language-select {
+        min-width: 45px;
+        width: 45px;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.25rem;
+    }
+    
+    .swap-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    footer small {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.flashcard-custom {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Ensure text doesn't overflow */
+.card-body > div > div {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: normal;
-    text-align: center;
-    display: block;
-    width: 100%;
-    word-break: keep-all;
-    hyphens: none;
-}
-
-.card-front h2 {
-    color: #333;
-}
-
-.card-back h2 {
-    color: #555;
-}
-
-/* Controls handled by Bootstrap classes */
-
-.control-btn {
-    padding: 12px 24px;
-    border: none !important;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: rgba(255,255,255,0.2) !important;
-    color: white !important;
-    backdrop-filter: blur(10px);
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.control-btn:hover:not(:disabled) {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
-}
-
-.control-btn:active:not(:disabled) {
-    transform: translateY(0px) scale(0.98);
-    background: rgba(255,255,255,0.4);
-}
-
-.control-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.control-btn.primary {
-    background: white !important;
-    color: #667eea !important;
-    font-weight: bold;
-}
-
-.control-btn.primary:hover {
-    background: #f8f9fa;
-}
-
-.control-btn.primary:active {
-    transform: translateY(0px) scale(0.98);
-    background: #e9ecef;
-}
-
-
-
-/* Responsive adjustments with Bootstrap */
-@media (max-width: 576px) {
-    header h1 {
-        font-size: 2rem !important;
-    }
-    
-    .flash-card {
-        height: 180px;
-    }
-    
-    .card-content h2 {
-        font-size: 1.1rem;
-    }
-    
-    .card-image-container {
-        height: 60px;
-        margin-bottom: 10px;
-    }
-    
-    .nav-btn {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .control-btn {
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .flash-card {
-        height: 250px;
-    }
-    
-    .card-content h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .card-container {
-        max-width: 700px;
-    }
-    
-    .flash-card {
-        height: 280px;
-    }
-    
-    .card-content h2 {
-        font-size: 2rem;
-    }
 } 

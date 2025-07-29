@@ -1,75 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Flash Cards - Vocabulary & Phrases</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=17">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Languages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container-fluid min-vh-100 position-relative">
+<body class="d-flex flex-column h-100">
+    <!-- Header using Bootstrap -->
+    <header class="bg-light bg-opacity-10 text-white text-center py-2 mx-3 mt-2 rounded-3">
+        <h2 class="mb-1 fs-4 fw-semibold">Learn Languages</h2>
+    </header>
 
+    <!-- Main content using Bootstrap grid and flexbox -->
+    <main class="flex-fill d-flex align-items-center justify-content-center p-3">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress mb-4" style="height: 4px;">
+                        <div id="progress-fill" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
 
-        <div class="container">
-            <div class="row min-vh-100">
-                <div class="col-12">
-                    <header class="text-center py-4">
-                        <h1 class="mb-4">Learn English</h1>
-                        <nav class="d-flex justify-content-center gap-2 flex-wrap">
-                                                                                      <button id="vocab-btn" class="btn nav-btn active">शब्दावली (Vocabulary)</button>
-                             <button id="phrases-btn" class="btn nav-btn">वाक्य (Phrases)</button>
-                        </nav>
-                    </header>
-
-                    <main class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
-                        <div class="progress-container mb-4">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-fill"></div>
-                                <span class="progress-text" id="progress-text">0 / 0</span>
-                            </div>
-                        </div>
-
-                        <div class="card-container mb-4">
-                            <div class="flash-card" id="flash-card">
-                                <div class="card-front" id="card-front">
-                                    <div class="card-content">
-                                        <div class="card-image-container" id="card-image-container">
-                                            <img id="card-image" class="card-image" alt="" style="display: none;">
-                                            <div class="image-loading" id="image-loading" style="display: none;">📷</div>
-                                        </div>
-                                        <h2 id="front-text">
-                                            <div class="hindi-text">हिंदी शब्द यहाँ दिखेगा</div>
-                                            <div class="english-text">English word will appear here</div>
-                                        </h2>
-                                    </div>
-                                </div>
-                                <div class="card-back" id="card-back">
-                                    <div class="card-content">
-                                        <h2 id="back-text">English Translation</h2>
-                                    </div>
+                    <!-- Flash Card using Bootstrap Card -->
+                    <div class="card shadow-lg border-0 mb-4 flashcard-custom" id="flash-card">
+                        <div class="card-body p-0 d-flex flex-column" style="min-height: 300px;">
+                            
+                            <!-- Front card content -->
+                            <div class="flex-fill d-flex align-items-center justify-content-center p-4 text-center">
+                                <div id="front-text" class="w-100">
+                                    <div class="fs-4 fw-medium" id="front-content">Loading...</div>
                                 </div>
                             </div>
+                            
+                            <!-- Divider -->
+                            <hr class="mx-4 my-0">
+                            
+                            <!-- Back card content -->
+                            <div class="flex-fill d-flex align-items-center justify-content-center p-4 text-center">
+                                <div id="back-text" class="w-100">
+                                    <div class="fs-4 fw-medium" id="back-content">Loading...</div>
+                                </div>
+                            </div>
+                            
                         </div>
+                    </div>
+
+                    <!-- Navigation using Bootstrap buttons and utilities -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <button id="prev-btn" class="btn btn-dark">
+                            <
+                        </button>
                         
-                        <!-- Swipe hint -->
-                        <div class="text-center mb-3">
-                            <small class="text-light" style="opacity: 0.7; font-size: 0.85rem;">
-                                Swipe left/right or use arrow keys to navigate • Refresh page to shuffle
-                            </small>
-                        </div>
+                        <small id="progress-text" class="text-muted">1 / 1783</small>
+                        
+                        <button id="next-btn" class="btn btn-dark">
+                            >
+                        </button>
+                    </div>
 
-                                                  <div class="controls d-flex justify-content-center gap-3 flex-wrap mb-4">
-                              <button id="prev-btn" class="btn control-btn" disabled>Previous</button>
-                              <button id="next-btn" class="btn control-btn" disabled>Next</button>
-                          </div>
-                    </main>
+                    <!-- Help Text -->
+                    <div class="text-center">
+                        <small class="text-muted opacity-75">Arrow keys • Space to swap • Swipe on mobile</small>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer using Bootstrap -->
+    <footer class="py-2">
+        <div class="container-fluid px-1">
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
+                
+                <div class="d-flex align-items-center gap-1">
+                    <small class="text-muted fw-medium">From</small>
+                    <select id="front-lang-select" class="form-select form-select-sm language-select">
+                        <option value="hi">हिं</option>
+                        <option value="en">EN</option>
+                        <option value="fi">FI</option>
+                    </select>
+                </div>
+                
+                <button id="swap-langs-btn" class="btn btn-outline-primary btn-sm rounded-circle swap-btn" 
+                        title="Swap languages (Space key)">
+                    ⇄
+                </button>
+                
+                <div class="d-flex align-items-center gap-1">
+                    <small class="text-muted fw-medium">To</small>
+                    <select id="back-lang-select" class="form-select form-select-sm language-select">
+                        <option value="hi">हिं</option>
+                        <option value="en" selected>EN</option>
+                        <option value="fi">FI</option>
+                    </select>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
