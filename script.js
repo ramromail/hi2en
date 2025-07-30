@@ -20,10 +20,6 @@ class FlashCardApp {
         this.flashCard = document.getElementById('flash-card');
         this.frontContent = document.getElementById('front-content');
         this.backContent = document.getElementById('back-content');
-        this.prevBtn = document.getElementById('prev-btn');
-        this.nextBtn = document.getElementById('next-btn');
-        this.progressFill = document.getElementById('progress-fill');
-        this.progressText = document.getElementById('progress-text');
         
         // Language selection controls
         this.frontLangSelect = document.getElementById('front-lang-select');
@@ -36,9 +32,6 @@ class FlashCardApp {
     }
 
     attachEventListeners() {
-        this.prevBtn.addEventListener('click', () => this.previousCard());
-        this.nextBtn.addEventListener('click', () => this.nextCard());
-        
         // Language selection listeners
         if (this.frontLangSelect) {
             this.frontLangSelect.addEventListener('change', (e) => {
@@ -58,100 +51,26 @@ class FlashCardApp {
             this.swapLangsBtn.addEventListener('click', () => this.swapLanguages());
         }
         
-        // Touch/swipe functionality
-        this.setupSwipeHandlers();
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            switch(e.key) {
-                case 'ArrowLeft':
-                    this.previousCard();
-                    break;
-                case 'ArrowRight':
-                    this.nextCard();
-                    break;
-                case ' ':
-                    e.preventDefault();
-                    this.swapLanguages();
-                    break;
-            }
-        });
+        // Click navigation on card
+        this.setupClickHandlers();
     }
 
-    setupSwipeHandlers() {
-        let startX = 0;
-        let startY = 0;
-        let endX = 0;
-        let endY = 0;
-        const minSwipeDistance = 50;
-        const maxVerticalDistance = 100;
-
-        this.flashCard.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-        });
-
-        this.flashCard.addEventListener('touchmove', (e) => {
-            if (Math.abs(e.touches[0].clientX - startX) > 10) {
-                e.preventDefault();
-            }
-        });
-
-        this.flashCard.addEventListener('touchend', (e) => {
-            endX = e.changedTouches[0].clientX;
-            endY = e.changedTouches[0].clientY;
+    setupClickHandlers() {
+        this.flashCard.addEventListener('click', (e) => {
+            // Get click position relative to the card
+            const rect = this.flashCard.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const cardWidth = rect.width;
+            const leftHalf = cardWidth / 2;
             
-            const deltaX = endX - startX;
-            const deltaY = endY - startY;
-            const absDeltaX = Math.abs(deltaX);
-            const absDeltaY = Math.abs(deltaY);
-
-            if (absDeltaX > minSwipeDistance && absDeltaY < maxVerticalDistance && absDeltaX > absDeltaY) {
-                if (deltaX > 0) {
-                    this.previousCard();
-                } else {
-                    this.nextCard();
-                }
+            // Determine which side was clicked
+            if (clickX < leftHalf) {
+                // Clicked left side - previous card
+                this.previousCard();
+            } else {
+                // Clicked right side - next card
+                this.nextCard();
             }
-        });
-
-        // Mouse drag support
-        let isMouseDown = false;
-        let mouseStartX = 0;
-
-        this.flashCard.addEventListener('mousedown', (e) => {
-            isMouseDown = true;
-            mouseStartX = e.clientX;
-            this.flashCard.style.cursor = 'grabbing';
-        });
-
-        this.flashCard.addEventListener('mousemove', (e) => {
-            if (isMouseDown) {
-                const deltaX = e.clientX - mouseStartX;
-                if (Math.abs(deltaX) > 10) {
-                    e.preventDefault();
-                }
-            }
-        });
-
-        this.flashCard.addEventListener('mouseup', (e) => {
-            if (isMouseDown) {
-                const deltaX = e.clientX - mouseStartX;
-                if (Math.abs(deltaX) > 50) {
-                    if (deltaX > 0) {
-                        this.previousCard();
-                    } else {
-                        this.nextCard();
-                    }
-                }
-            }
-            isMouseDown = false;
-            this.flashCard.style.cursor = '';
-        });
-
-        this.flashCard.addEventListener('mouseleave', () => {
-            isMouseDown = false;
-            this.flashCard.style.cursor = '';
         });
     }
 
@@ -235,16 +154,14 @@ class FlashCardApp {
         if (data.length === 0) {
             this.frontContent.textContent = 'No data available';
             this.backContent.textContent = 'Please add some cards';
-            this.updateProgress(0);
-            this.updateNavigation();
             return;
         }
 
         const currentCard = data[this.currentIndex];
         
         // Get parent elements to apply flag backgrounds
-        const frontSection = this.frontContent.closest('.flex-fill');
-        const backSection = this.backContent.closest('.flex-fill');
+        const frontSection = this.frontContent.closest('.card-half-top');
+        const backSection = this.backContent.closest('.card-half-bottom');
         
         // Remove existing flag classes
         frontSection.classList.remove('card-section-hi', 'card-section-en', 'card-section-fi');
@@ -256,25 +173,10 @@ class FlashCardApp {
         
         // Update content with language-specific styling
         this.frontContent.textContent = currentCard[this.frontLang] || 'No translation available';
-        this.frontContent.className = `fs-4 fw-medium ${this.frontLang}-text`;
+        this.frontContent.className = `flashcard-text fw-medium ${this.frontLang}-text`;
         
         this.backContent.textContent = currentCard[this.backLang] || 'No translation available';
-        this.backContent.className = `fs-4 fw-medium ${this.backLang}-text`;
-        
-        this.updateProgress((this.currentIndex + 1) / data.length * 100);
-        this.updateNavigation();
-    }
-
-    updateProgress(percentage) {
-        this.progressFill.style.width = `${percentage}%`;
-        const data = this.getCurrentData();
-        this.progressText.textContent = `${this.currentIndex + 1} / ${data.length}`;
-    }
-
-    updateNavigation() {
-        const data = this.getCurrentData();
-        this.prevBtn.disabled = this.currentIndex === 0;
-        this.nextBtn.disabled = this.currentIndex === data.length - 1;
+        this.backContent.className = `flashcard-text fw-medium ${this.backLang}-text`;
     }
 
     previousCard() {
@@ -291,6 +193,7 @@ class FlashCardApp {
             this.updateDisplay();
         }
     }
+
 }
 
 // Initialize the app when the page loads

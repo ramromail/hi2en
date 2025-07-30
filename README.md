@@ -7,14 +7,14 @@ A modern, minimalist flashcard application supporting multiple languages with a 
 - **Tri-lingual Support**: Learn between Hindi, English, and Finnish
 - **Dynamic Language Selection**: Choose any source and target language combination
 - **Flag Visual Indicators**: Subtle flag icons show which language is which
-- **Dark Theme Design**: Easy on the eyes with pure black background and elegant styling
+- **Ultra-minimalist Design**: Pure black theme with zero distractions
 - **Automatic Shuffling**: Content randomized on every page load for varied learning
-- **Swipe Gestures**: Mobile-friendly left/right swipe navigation
-- **Responsive Design**: Bootstrap-powered layout optimized for all devices
-- **Progress Tracking**: Visual progress bar shows your advancement
-- **Multiple Navigation Options**: Swipe, keyboard arrows, or button controls
-- **Minimalist Interface**: Clean, distraction-free design focuses on learning
-- **GitHub Pages Ready**: Static files for easy hosting
+- **Click Navigation**: Simple left/right click zones for intuitive phrase browsing
+- **Bootstrap-Native Layout**: Clean, professional interface using Bootstrap components
+- **Responsive Design**: Perfect scaling on any device from mobile to desktop
+- **Instant Language Swap**: One-click language switching with visual feedback
+- **Distraction-Free Interface**: No animations, no clutter - pure focus on learning
+- **Offline-First**: Works completely offline with locally bundled dependencies
 - **Comprehensive Content**: 1700+ phrases covering essential conversations and vocabulary
 
 ## Supported Languages
@@ -30,17 +30,15 @@ A modern, minimalist flashcard application supporting multiple languages with a 
 - **Swap Button**: Click ⇄ or press Space to instantly swap languages
 - **Dynamic Updates**: Flags and content update immediately when you change languages
 
-### Navigation Options
-1. **Swipe Gestures** (Mobile/Tablet):
-   - Swipe left: Next card
-   - Swipe right: Previous card
+### Navigation
+1. **Click Navigation** (All Devices):
+   - Click left half of card: Previous phrase
+   - Click right half of card: Next phrase
+   - Responsive cursor feedback shows navigation zones
 
-2. **Keyboard Navigation** (Desktop):
-   - Left Arrow: Previous card
-   - Right Arrow: Next card
-   - Spacebar: Swap languages
-
-3. **Button Controls**: Use < and > buttons for navigation
+2. **Language Swapping**:
+   - Click ⇄ button in footer to swap languages
+   - Space key also swaps languages for keyboard users
 
 ### Visual Language Indicators
 - **Small flag icons** appear in the corners of each card section
@@ -71,11 +69,13 @@ The application includes comprehensive language content covering:
 - **Professional appearance**: Elegant, modern aesthetic
 - **Better focus**: Minimal distractions keep attention on learning content
 
-### Minimalist Interface
-- **Clean typography**: High contrast text for maximum readability
+### Ultra-Minimalist Interface
+- **Zero animations**: Static design eliminates all distractions
+- **Bootstrap-native components**: Professional layout using tested UI patterns
+- **Click-optimized**: Large, intuitive interaction zones
+- **Clean typography**: High contrast text with perfect responsive scaling
 - **Subtle indicators**: Flag icons provide context without visual clutter
-- **Responsive scaling**: Content adapts beautifully to any screen size
-- **Gesture-friendly**: Large touch targets and smooth swipe responses
+- **Pure focus**: Every element serves the learning experience
 
 ## Setup for GitHub Pages
 
@@ -87,13 +87,20 @@ The application includes comprehensive language content covering:
 ## File Structure
 
 ```
-├── index.html          # Main application HTML
-├── styles.css          # Dark theme styling and responsive design
-├── script.js           # Application logic and language handling
+├── index.html          # Main application HTML (88 lines)
+├── styles.css          # Minimal custom CSS + Bootstrap utilities (272 lines)
+├── script.js           # Clean application logic (201 lines)
+├── assets/
+│   ├── css/
+│   │   └── bootstrap.min.css    # Bootstrap 5.3.2 for offline use
+│   └── js/
+│       └── bootstrap.bundle.min.js  # Bootstrap JS components
 ├── data/
-│   └── phrases.json    # Tri-lingual phrase database
+│   └── phrases.json    # Tri-lingual phrase database (100 chapters)
 └── README.md          # This documentation
 ```
+
+**Total Custom Code: Only 561 lines** - Ultra-lean codebase thanks to Bootstrap!
 
 ## Data Format
 
@@ -113,13 +120,14 @@ The application uses a structured JSON format for tri-lingual content:
 
 ## Technologies Used
 
-- **HTML5**: Semantic structure with modern accessibility features
-- **CSS3**: Advanced styling with CSS Grid, Flexbox, and custom properties
-- **Bootstrap 5**: Responsive components and utility classes
-- **Vanilla JavaScript (ES6+)**: Modern async/await and class-based architecture
-- **JSON**: Structured tri-lingual data storage
-- **SVG**: Crisp flag icons with embedded data URIs
-- **CSS Animations**: Smooth transitions and hover effects
+- **HTML5**: Semantic structure with Bootstrap components for accessibility
+- **Bootstrap 5**: Native navbar, footer, and utility classes for professional layout
+- **CSS3**: Minimal custom styling using modern responsive units (rem, vh, clamp)
+- **Vanilla JavaScript (ES6+)**: Clean class-based architecture with modern features
+- **JSON**: Structured tri-lingual data storage with chapter-based organization
+- **Offline-First Design**: All dependencies bundled locally - zero internet required
+- **SVG Data URIs**: Crisp flag icons embedded directly in CSS
+- **Static Design**: No animations or transitions - pure performance focus
 
 ## Browser Support
 
@@ -137,6 +145,30 @@ Works in all modern browsers:
 - **Travelers**: Essential phrases for visiting India, UK, or Finland
 - **Language enthusiasts**: Clean interface for efficient vocabulary building
 - **Mobile learners**: Optimized for on-the-go study sessions
+
+## Offline Usage
+
+This application works completely offline! All dependencies are bundled locally:
+
+```
+flashcard/
+├── assets/
+│   ├── css/
+│   │   └── bootstrap.min.css    # Bootstrap 5.3.2 CSS (227KB)
+│   └── js/
+│       └── bootstrap.bundle.min.js  # Bootstrap 5.3.2 JS (79KB)
+├── data/
+│   └── phrases.json            # Tri-lingual phrase data
+├── index.html                  # Main application
+├── styles.css                  # Custom responsive styling
+└── script.js                   # Application logic
+```
+
+**Benefits of Local Assets:**
+- ✅ **Zero internet dependency** - Works in airplane mode
+- ⚡ **Faster loading** - No CDN requests 
+- 🔒 **Enhanced privacy** - No external tracking
+- 📱 **Mobile-friendly** - No data usage after initial download
 
 ## Contributing
 

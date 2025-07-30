@@ -4,66 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Languages</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="d-flex flex-column h-100">
-    <!-- Header using Bootstrap -->
-    <header class="bg-light bg-opacity-10 text-white text-center py-2 mx-3 mt-2 rounded-3">
-        <h2 class="mb-1 fs-4 fw-semibold">Learn Languages</h2>
+    <!-- Header using Bootstrap built-in layout -->
+    <header class="navbar navbar-dark bg-dark bg-opacity-25 border-bottom border-secondary border-opacity-25 px-3 py-2 flex-shrink-0">
+        <div class="container-fluid justify-content-center">
+            <h1 class="navbar-brand mb-0 fs-5 fw-semibold text-white">Learn Languages</h1>
+        </div>
     </header>
 
     <!-- Main content using Bootstrap grid and flexbox -->
-    <main class="flex-fill d-flex align-items-center justify-content-center p-3">
+    <main class="flex-fill d-flex align-items-center justify-content-center p-2 py-3">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-8 d-flex flex-column justify-content-center">
                     
-                    <!-- Progress Bar -->
-                    <div class="progress mb-4" style="height: 4px;">
-                        <div id="progress-fill" class="progress-bar" role="progressbar" style="width: 0%"></div>
-                    </div>
-
                     <!-- Flash Card using Bootstrap Card -->
-                    <div class="card shadow-lg border-0 mb-4 flashcard-custom" id="flash-card">
-                        <div class="card-body p-0 d-flex flex-column" style="min-height: 300px;">
+                    <div class="card shadow-lg border-0 flashcard-custom" id="flash-card">
+                        <div class="card-body p-0 d-flex flex-column flashcard-body">
                             
-                            <!-- Front card content -->
-                            <div class="flex-fill d-flex align-items-center justify-content-center p-4 text-center">
-                                <div id="front-text" class="w-100">
-                                    <div class="fs-4 fw-medium" id="front-content">Loading...</div>
-                                </div>
+                            <!-- Front card content - Top half -->
+                            <div class="card-half-top d-flex align-items-center justify-content-center p-2 text-center">
+                                <div class="flashcard-text fw-medium w-100" id="front-content">Loading...</div>
                             </div>
                             
                             <!-- Divider -->
-                            <hr class="mx-4 my-0">
+                            <hr class="mx-3 my-0">
                             
-                            <!-- Back card content -->
-                            <div class="flex-fill d-flex align-items-center justify-content-center p-4 text-center">
-                                <div id="back-text" class="w-100">
-                                    <div class="fs-4 fw-medium" id="back-content">Loading...</div>
-                                </div>
+                            <!-- Back card content - Bottom half -->
+                            <div class="card-half-bottom d-flex align-items-center justify-content-center p-2 text-center">
+                                <div class="flashcard-text fw-medium w-100" id="back-content">Loading...</div>
                             </div>
                             
                         </div>
                     </div>
 
-                    <!-- Navigation using Bootstrap buttons and utilities -->
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <button id="prev-btn" class="btn btn-dark">
-                            <
-                        </button>
-                        
-                        <small id="progress-text" class="text-muted">1 / 1783</small>
-                        
-                        <button id="next-btn" class="btn btn-dark">
-                            >
-                        </button>
-                    </div>
-
                     <!-- Help Text -->
-                    <div class="text-center">
-                        <small class="text-muted opacity-75">Arrow keys • Space to swap • Swipe on mobile</small>
+                    <div class="text-center mt-2">
+                        <small class="text-muted opacity-75">Click left/right to change phrases • Use ⇄ button to swap languages</small>
                     </div>
                     
                 </div>
@@ -71,9 +51,9 @@
         </div>
     </main>
 
-    <!-- Footer using Bootstrap -->
-    <footer class="py-2">
-        <div class="container-fluid px-1">
+    <!-- Footer using Bootstrap built-in layout -->
+    <footer class="bg-dark bg-opacity-50 border-top border-secondary border-opacity-25 py-2 flex-shrink-0">
+        <div class="container-fluid px-3">
             <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
                 
                 <div class="d-flex align-items-center gap-1">
@@ -103,7 +83,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
